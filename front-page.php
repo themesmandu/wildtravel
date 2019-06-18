@@ -98,5 +98,17 @@ if ($the_query->have_posts()) :
 		</div>
 	</section>
 <?php endif; ?>
+
+<script>
+	jQuery(document).ready(function($) {
+		$('.widget_newsletterwidget').find("input[type=email]").each(function() {
+			if (!$(this).val()) {
+				$(this).attr("placeholder", "email address");
+			}
+		});
+	});
+</script>
+
+
 <?php
 get_footer();

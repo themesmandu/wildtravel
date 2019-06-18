@@ -169,7 +169,7 @@ function wildtravel_scripts() {
 	wp_enqueue_script( 'wildtravel-global', get_template_directory_uri() . '/js/global.js', array(), '20151215', true );
 
 	// Font Open Sans
-	wp_enqueue_style( 'wildtravel-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap', false );
+	wp_enqueue_style( 'wildtravel-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap', false );
 
 	// Font Garamond
 	wp_enqueue_style( 'wildtravel-custom-google-fonts', 'https://fonts.googleapis.com/css?family=EB+Garamond:600,700&display=swap', false );

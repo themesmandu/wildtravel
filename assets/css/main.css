@@ -489,6 +489,56 @@ section .blog_content p:nth-child(2) {
 }
 
 
+/* --Footer Newslwtter Styles -- */
+
+.widget_newsletterwidget form {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.widget_newsletterwidget .tnp-widget label {
+    display: none;
+}
+
+.widget_newsletterwidget .tnp-widget .tnp-field {
+    display: inline-block;
+    margin: 0;
+}
+
+.widget_newsletterwidget .tnp-widget .tnp-field-email {
+    width: 28%;
+}
+
+.widget_newsletterwidget .tnp-widget input[type=text],
+.widget_newsletterwidget .tnp-widget input[type=email],
+.widget_newsletterwidget .tnp-widget select {
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #abb0b2;
+    background: #ffffff;
+    color: #343434;
+    padding: 0 10px;
+    height: 32px;
+    border-radius: 3px;
+}
+
+.widget_newsletterwidget .tnp-widget input::placeholder {
+    font-weight: 400;
+    opacity: .7;
+}
+
+.widget_newsletterwidget .widget_newsletterwidget .tnp-field-button {
+    display: inline-block;
+}
+
+.widget_newsletterwidget .tnp-widget input[type=submit] {
+    background: #aaaaaa;
+    padding: 0 18px;
+    height: 32px;
+    border-radius: 3px;
+}
+
+
 /* -- to the top css -- */
 
 .up-btn {
