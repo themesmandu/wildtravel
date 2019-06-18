@@ -32,7 +32,7 @@ $the_query = new WP_Query(
 if ( $the_query->have_posts() ) :
 	?>
 
-<?php esc_html_e( 'Latest Stories', 'text_domain' ); ?>
+	<?php esc_html_e( 'Latest Stories', 'text_domain' ); ?>
 			<?php
 			// Loop through the posts.
 			while ( $the_query->have_posts() ) :
@@ -60,7 +60,7 @@ $the_query = new WP_Query(
 if ( $the_query->have_posts() ) :
 	?>
 
-<?php esc_html_e( 'Read on', 'text_domain' ); ?>
+	<?php esc_html_e( 'Read on', 'text_domain' ); ?>
 			<?php
 			// Loop through the posts.
 			while ( $the_query->have_posts() ) :
