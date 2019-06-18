@@ -46,6 +46,7 @@ if ( ! function_exists( 'wildtravel_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'wildtravel' ),
+				'menu-2' => esc_html__( 'Social', 'wildtravel' ),
 			)
 		);
 
