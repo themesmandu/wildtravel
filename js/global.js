@@ -12,25 +12,6 @@ jQuery(document).ready(function($) {
     }
 });
 
-// background smooth scroll javascript
-
-jQuery(document).ready(function($) {
-    (function() {
-        var parallax = document.querySelectorAll(".site-header"),
-            speed = 0.8;
-        window.onscroll = function() {
-            [].slice.call(parallax).forEach(function(el, i) {
-
-                var windowYOffset = window.pageYOffset,
-                    elBackgrounPos = ".5% " + (windowYOffset * speed) + "px";
-
-                el.style.backgroundPosition = elBackgrounPos;
-
-            });
-        };
-    })();
-});
-
 
 // To top Java Script
 
