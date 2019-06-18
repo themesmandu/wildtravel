@@ -192,9 +192,6 @@
         display: block;
         padding: 0;
     }
-    #navbarmenus .navbar-nav .menu-item:last-child {
-        border-bottom: 0;
-    }
     #navbarmenus .navbar-nav .menu-item .nav-link {
         font-size: 13px;
         color: #d7d5f0;
@@ -204,10 +201,18 @@
         border-bottom: 1px solid transparent;
         display: block;
     }
+    #navbarmenus #social-menu .menu-item {
+        text-align: left;
+    }
+    #social-menu li a[href]:before {
+        margin-right: 10px;
+    }
     #navbarmenus .sub-menu,
     #navbarmenus .sub-menu .sub-menu {
         animation: none;
         background: transparent;
+        padding-left: 20px;
+        width: auto;
     }
     #navbarmenus .navbar-nav .menu-item .sub-menu .menu-item {
         border: none;
@@ -221,12 +226,12 @@
     }
     .menu-item-has-children .caret {
         position: absolute;
-        top: 5px;
+        top: 12px;
         right: 15px;
         left: unset;
     }
     .sub-menu .caret:after {
-        color: #2e5ea2;
+        color: #ffffff;
         transform: rotate(0deg);
     }
     .main-navigation .navbar-nav .menu-item.menu-open>ul {
@@ -236,7 +241,6 @@
     .main-navigation .navbar-nav .menu-item.menu-open>ul ul {
         right: unset;
         left: unset;
-        padding: 0 0 0 20px;
     }
 }
 

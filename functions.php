@@ -137,7 +137,7 @@ function wildtravel_widgets_init() {
 				/* translators: %d: footer widget number. */
 				'name'          => sprintf( esc_html__( 'Footer %d', 'wildtravel' ), $i ),
 				'id'            => 'footer-' . $i,
-				'before_widget' => '<div id="%1$s" class="widget %2$s col-lg-3 col-sm-6">',
+				'before_widget' => '<div id="%1$s" class="widget %2$s col-sm-12">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
@@ -172,7 +172,7 @@ function wildtravel_scripts() {
 	wp_enqueue_style( 'wildtravel-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap', false );
 
 	// Font Garamond
-	wp_enqueue_style( 'wildtravel-custom-google-fonts', 'https://fonts.googleapis.com/css?family=EB+Garamond:400,700&display=swap', false );
+	wp_enqueue_style( 'wildtravel-custom-google-fonts', 'https://fonts.googleapis.com/css?family=EB+Garamond:600,700&display=swap', false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

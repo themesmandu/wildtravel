@@ -29,19 +29,33 @@ $the_query = new WP_Query(
 ?>
 <?php
 // If we have posts lets show them.
-if ( $the_query->have_posts() ) :
+if ($the_query->have_posts()) :
 	?>
+	<section class="section_one">
+		<div class="container">
+			<h2 class="section-title"><span><?php esc_html_e('Latest Stories', 'text_domain'); ?></span></h2>
+			<div class="row">
+				<?php
+				// Loop through the posts.
+				while ($the_query->have_posts()) :
+					$the_query->the_post();
+					?>
 
-	<?php esc_html_e( 'Latest Stories', 'text_domain' ); ?>
-			<?php
-			// Loop through the posts.
-			while ( $the_query->have_posts() ) :
-				$the_query->the_post();
-				?>
-				<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
+					<article class="col-sm-12">
+						<figure>
+							<?php wildtravel_post_thumbnail(); ?>
+							<div class="blog_content">
+								<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+								<?php the_content(''); ?>
+							</div>
+						</figure>
+					</article>
 
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			</div>
+		</div>
+	</section>
 <?php endif; ?>
 
 <?php
@@ -49,7 +63,7 @@ if ( $the_query->have_posts() ) :
 $the_query = new WP_Query(
 	array(
 		'post_type'           => 'post',
-		'orderby'             => 'rand',
+		//'orderby'             => 'rand',
 		'ignore_sticky_posts' => 1,
 		'posts_per_page'      => 6,
 	)
@@ -57,19 +71,32 @@ $the_query = new WP_Query(
 ?>
 <?php
 // If we have posts lets show them.
-if ( $the_query->have_posts() ) :
+if ($the_query->have_posts()) :
 	?>
+	<section class="section_two">
+		<div class="container">
+			<h2 class="section-title"><span><?php esc_html_e('Read on', 'text_domain'); ?></span></h2>
+			<div class="row">
+				<?php
+				// Loop through the posts.
+				while ($the_query->have_posts()) :
+					$the_query->the_post();
+					?>
 
-	<?php esc_html_e( 'Read on', 'text_domain' ); ?>
-			<?php
-			// Loop through the posts.
-			while ( $the_query->have_posts() ) :
-				$the_query->the_post();
-				?>
-				<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
+					<article class="col-sm-6">
+						<figure>
+							<?php wildtravel_post_thumbnail(); ?>
+							<div class="blog_content">
+								<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+							</div>
+						</figure>
+					</article>
 
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			</div>
+		</div>
+	</section>
 <?php endif; ?>
 <?php
 get_footer();
