@@ -43,7 +43,9 @@ if ($the_query->have_posts()) :
 
 					<article class="col-sm-12">
 						<figure>
-							<?php wildtravel_post_thumbnail(); ?>
+							<a href="<?php the_permalink(); ?>">
+								<?php wildtravel_post_thumbnail(); ?>
+							</a>
 							<div class="blog_content">
 								<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 								<?php the_content(''); ?>
@@ -85,7 +87,9 @@ if ($the_query->have_posts()) :
 
 					<article class="col-sm-6">
 						<figure>
-							<?php wildtravel_post_thumbnail(); ?>
+							<a href="<?php the_permalink(); ?>">
+								<?php wildtravel_post_thumbnail(); ?>
+							</a>
 							<div class="blog_content">
 								<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 							</div>

@@ -12,13 +12,13 @@ get_header();
 
 <div class="container">
 	<div class="row">
-		<main id="main" class="col-lg-8">
+		<main id="main" class="col-md-12">
 
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			get_template_part( 'template-parts/content', 'single' );
 
 			the_post_navigation(
 				array(
@@ -37,10 +37,6 @@ get_header();
 		?>
 
 		</main><!-- #main -->
-
-		<?php
-		get_sidebar();
-		?>
 	</div><!-- .row -->
 </div><!-- .container -->
 
