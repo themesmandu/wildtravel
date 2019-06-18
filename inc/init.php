@@ -46,21 +46,6 @@ require get_template_directory() . '/inc/theme-custom-functions.php';
 require get_template_directory() . '/inc/dynamic-styles.php';
 
 /**
- * Include tgm required plaugins functionality.
- */
-require get_template_directory() . '/inc/tgm-plugin/tgm-required-plugins.php';
-
-if ( class_exists( 'OCDI_Plugin' ) ) {
-	/**
-	* Include OCDI plugin demo importer compatibility.
-	*/
-	require get_template_directory() . '/inc/demo-import.php';
-}
-
-
-
-
-/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

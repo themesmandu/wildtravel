@@ -36,8 +36,6 @@ function wildtravel_customize_register( $wp_customize ) {
 		// load custom control dropdown taxonomy.
 		require get_template_directory() . '/inc/customizer/custom-controls/class-wildtravel-dropdown-posts-control.php';
 
-		// load custom control dropdown posts.
-		require get_template_directory() . '/inc/customizer/custom-controls/class-wildtravel-dropdown-taxonomies-control.php';
 
 		// Add panel for common theme options.
 		$wp_customize->add_panel(
@@ -49,11 +47,6 @@ function wildtravel_customize_register( $wp_customize ) {
 			)
 		);
 
-		// load destination color picker option.
-		require get_template_directory() . '/inc/customizer/theme-options/destination-color.php';
-
-		// load header option.
-		require get_template_directory() . '/inc/customizer/theme-options/header.php';
 
 		// load footer option.
 		require get_template_directory() . '/inc/customizer/theme-options/footer.php';
@@ -68,26 +61,6 @@ function wildtravel_customize_register( $wp_customize ) {
 			)
 		);
 
-		// load search section option.
-		require get_template_directory() . '/inc/customizer/front-page/search.php';
-
-		// load featured destination option.
-		require get_template_directory() . '/inc/customizer/front-page/destination.php';
-
-		// load about us option.
-		require get_template_directory() . '/inc/customizer/front-page/about.php';
-
-		// load articles option.
-		require get_template_directory() . '/inc/customizer/front-page/articles.php';
-
-		// load testimonial option.
-		require get_template_directory() . '/inc/customizer/front-page/testimonial.php';
-
-		// load partners option.
-		require get_template_directory() . '/inc/customizer/front-page/partners.php';
-
-		// load guide option.
-		require get_template_directory() . '/inc/customizer/front-page/guide.php';
 
 }
 add_action( 'customize_register', 'wildtravel_customize_register' );

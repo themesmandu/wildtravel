@@ -5,7 +5,7 @@
  * @package Wildtravel
  */
 
-if ( ! function_exists( 'wildtravel_front_page_destination_title' ) ) :
+if ( ! function_exists( 'wildtravel_title_split' ) ) :
 
 	/**
 	 * Display destination title on front page.
@@ -29,42 +29,6 @@ if ( ! function_exists( 'wildtravel_front_page_destination_title' ) ) :
 
 endif;
 
-if ( ! function_exists( 'wildtravel_front_page_destination_image' ) ) :
-
-	/**
-	 * Display destination image on front page.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param string $destination_id Id of the destination taxonomy.
-	 */
-	function wildtravel_front_page_destination_image( $destination_id ) {
-		if ( ! empty( wp_get_attachment_url( get_term_meta( $destination_id, 'wp_travel_trip_type_image_id', true ) ) ) ) {
-			?>
-			<a href="<?php echo esc_url( get_term_link( $destination_id ) ); ?>"><img class="main-image" src="<?php echo esc_url( wp_get_attachment_url( get_term_meta( $destination_id, 'wp_travel_trip_type_image_id', true ) ) ); ?>"></a>
-			<?php
-		}
-	}
-
-endif;
-
-if ( ! function_exists( 'wildtravel_front_page_destination_name' ) ) :
-
-	/**
-	 * Display destination name on front page.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param string $destination_id Id of the destination taxonomy.
-	 */
-	function wildtravel_front_page_destination_name( $destination_id ) {
-		$wildtravel_desination = get_term( $destination_id );
-		?>
-		<span style="background: <?php echo wp_kses_post( wildtravel_theme_options( 'destination_color_' . $destination_id ) ); ?>"><a href="<?php echo esc_url( get_term_link( $destination_id ) ); ?>"><?php echo esc_html( $wildtravel_desination->name ); ?></a></span>
-		<?php
-	}
-
-endif;
 
 if ( ! function_exists( 'wildtravel_header_page_title' ) ) :
 
