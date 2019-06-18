@@ -7,11 +7,10 @@ jQuery(document).ready(function($) {
         $menu_item.append('<span class="caret"></span>');
 
         $('.caret').click(function() {
-            $(this).parent().toggleClass('menu-open');
+            $(this).parent().toggleClass('menu-open').siblings().removeClass('menu-open');
         });
     }
 });
-
 
 // To top Java Script
 

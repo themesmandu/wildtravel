@@ -1,3 +1,5 @@
+@import "dropdown.css";
+
 /* -- theme body style -- */
 
 html,
@@ -8,6 +10,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     word-break: break-word;
+    letter-spacing: .5px;
 }
 
 #page {
@@ -184,24 +187,61 @@ h6 {
 /* -- navbar style -- */
 
 header.site-header {
-    min-height: 450px;
+    min-height: 700px;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+header.site-header:before {
+    content: '';
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0, #000 100%);
+    position: absolute;
+    height: 250px;
+    opacity: .7;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.header-content {
+    text-align: center;
+    padding: 175px 0;
+    position: relative;
+}
+
+.header-content h1 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.header-content p {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.header-content a {
+    font-size: 12px;
+    background: transparent;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    display: inline-block;
+    margin-top: 20px;
 }
 
 #site-navigation .container {
     max-width: 1920px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0, #000 100%);
 }
 
 #site-navigation .top-navigation {
     background: transparent;
     padding: 0;
-}
-
-.site-branding {
-    padding-left: 26px;
 }
 
 .site-title {
@@ -241,89 +281,75 @@ header.site-header {
 .navbar-expand-lg .navbar-nav .menu-item {
     position: relative;
     display: inline-block;
-    padding: 37px 26px 33px;
-    border-bottom: 5px solid #ffffff;
-}
-
-.navbar-expand-lg .navbar-nav:hover {
-    border-color: #27b0ff;
-}
-
-.navbar-expand-lg .navbar-nav .current-menu-item,
-.navbar-expand-lg .navbar-nav .current-menu-parent {
-    background: #2a3340;
-    border-color: #27b0ff;
+    margin: 0 15px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    font-size: 15px;
-    color: #292e34;
-    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    padding: 15px 0;
     text-transform: uppercase;
     display: block;
 }
 
-.navbar-expand-lg .current-menu-item .nav-link,
-.navbar-expand-lg .navbar-nav .current-menu-parent .nav-link {
-    color: #ffffff;
+.navbar-expand-lg .navbar-nav .nav-link:hover,
+.navbar-expand-lg .navbar-nav .menu-item-has-children:hover:after {
+    color: #fc660a;
 }
 
 
-/* -- Navigation Dropdown Styles -- */
+/* -- Navbar Social Icons -- */
 
-.menu-item-has-children:after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 12px;
-    content: "\f078";
-    color: #2e5ea2;
-    margin-left: 8px;
+#social-menu {
+    margin: 0;
 }
 
-.navbar-expand-lg .navbar-nav .current-menu-item.menu-item-has-children:after {
-    color: #ffffff;
-}
-
-.navbar-expand-lg .menu-item-has-children .nav-link {
+#social-menu li {
     display: inline-block;
+    margin: 0 32px 0 0;
+    text-align: center;
 }
 
-.navbar-expand-lg .sub-menu {
-    z-index: 9;
-    animation: fadeInUp .2s ease-in;
+#social-menu li:last-child {
+    margin: 0;
 }
 
-.navbar-expand-lg .sub-menu .sub-menu {
-    animation: fadeInSide .2s ease-in;
-}
-
-.navbar-expand-lg .sub-menu .menu-item {
-    display: block;
-}
-
-.navbar-expand-lg .sub-menu .menu-item {
-    border: none;
-}
-
-.navbar-expand-lg .menu-item-has-children .sub-menu .nav-link {
-    display: block;
-    color: #cccccc;
-}
-
-.navbar-expand-lg .sub-menu .menu-item-has-children {
-    position: relative;
-}
-
-.navbar-expand-lg .sub-menu .menu-item-has-children:after {
-    position: absolute;
-    top: 12px;
-    left: 0;
-    transform: rotate(90deg);
+#social-menu li a {
+    font-size: 0;
     color: #ffffff;
+    transition: .3s;
 }
 
-.navbar-expand-lg .sub-menu .nav-link:hover {
-    border-color: #27b0ff;
+#social-menu li a[href]:before {
+    font-family: 'Font Awesome 5 Brands';
+    content: "";
+    font-size: 18px;
+    font-weight: 900;
+}
+
+#social-menu li a[href*="facebook.com"]:before {
+    content: "\f39e";
+}
+
+#social-menu li a[href*="twitter.com"]:before {
+    content: "\f099";
+}
+
+#social-menu li a[href*="instagram.com"]:before {
+    content: "\f16d";
+}
+
+#social-menu li a[href*="youtube.com"]:before {
+    content: "\f167";
+}
+
+#social-menu li a[href*="linkedin.com"]:before {
+    content: "\f0e1";
+}
+
+#social-menu li a[href*="google.com"]:before {
+    content: "\f0d5";
 }
 
 
@@ -371,37 +397,4 @@ header.site-header {
 .up-btn.ayotothetop {
     visibility: visible;
     transform: translate3d(0, 0, 0);
-}
-
-
-/* -- All Dropdown Animations -- */
-
-@keyframes fadeInSide {
-    0% {
-        opacity: 0;
-        -webkit-transform: translatex(-20px);
-        -ms-transform: translatex(-20px);
-        transform: translatex(-20px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translatex(0);
-        -ms-transform: translatex(0);
-        transform: translatex(0);
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(10px);
-        -ms-transform: translateY(10px);
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-    }
 }

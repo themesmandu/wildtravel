@@ -83,6 +83,7 @@ if ( ! function_exists( 'wildtravel_header_page_title' ) ) :
 				<h1><?php echo wp_kses_post( $wildtravel_header_title ); ?></h1>
 					<?php echo wp_kses_post( $wildtravel_header_description ); ?>
 					<?php } ?>
+					<a href="#">know more</a>
 			</div>
 			<?php
 		elseif ( ! is_front_page() && is_home() || is_singular() ) :
