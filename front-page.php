@@ -51,7 +51,7 @@ $the_query = new WP_Query(
 		'post_type'           => 'post',
 		'orderby'             => 'rand',
 		'ignore_sticky_posts' => 1,
-		'posts_per_page'      => 9,
+		'posts_per_page'      => 6,
 	)
 );
 ?>
