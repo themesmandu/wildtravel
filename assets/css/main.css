@@ -841,7 +841,7 @@ article p {
 
 .comment-respond p.comment-form-author,
 .comment-respond p.comment-form-email {
-    width: calc(50% - 8px);
+    width: calc(50% - 10px);
     display: inline-block;
     margin: 0 0 26px;
 }
