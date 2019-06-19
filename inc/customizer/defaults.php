@@ -21,6 +21,12 @@ if ( ! function_exists( 'wildtravel_get_default_theme_options' ) ) :
 
 		$defaults = array();
 
+		// header defaults.
+		$defaults['front_header_title'] = 'This is header titile';
+		$defaults['header_button_text'] = 'Know More';
+		$defaults['header_button_link'] = home_url();
+
+		// footer defaukts.
 		$defaults['footer_copyright_text'] = 'Copyright';
 
 		// Pass through filter.

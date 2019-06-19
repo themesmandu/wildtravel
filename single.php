@@ -24,14 +24,7 @@ get_header();
 
 				<?php
 				// Query random posts.
-				$the_query = new WP_Query(
-					array(
-						'post_type'           => 'post',
-						'orderby'             => 'DESC',
-						'ignore_sticky_posts' => 1,
-						'posts_per_page'      => 5,
-					)
-				);
+				$the_query = wildtravel_related_post_query( get_the_ID(), 5 );
 				?>
 				<?php
 				// If we have posts lets show them.

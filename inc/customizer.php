@@ -36,7 +36,6 @@ function wildtravel_customize_register( $wp_customize ) {
 		// load custom control dropdown taxonomy.
 		require get_template_directory() . '/inc/customizer/custom-controls/class-wildtravel-dropdown-posts-control.php';
 
-
 		// Add panel for common theme options.
 		$wp_customize->add_panel(
 			'wildtravel_theme_options_panel',
@@ -47,6 +46,8 @@ function wildtravel_customize_register( $wp_customize ) {
 			)
 		);
 
+		// load footer option.
+		require get_template_directory() . '/inc/customizer/theme-options/header.php';
 
 		// load footer option.
 		require get_template_directory() . '/inc/customizer/theme-options/footer.php';
@@ -60,7 +61,6 @@ function wildtravel_customize_register( $wp_customize ) {
 				'priority'    => 140,
 			)
 		);
-
 
 }
 add_action( 'customize_register', 'wildtravel_customize_register' );
