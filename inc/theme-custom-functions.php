@@ -44,7 +44,7 @@ if ( ! function_exists( 'wildtravel_header_page_title' ) ) :
 			<?php if ( ! empty( wildtravel_theme_options( 'front_header_title' ) ) ) { ?>
 				<h1><?php echo esc_html( wildtravel_theme_options( 'front_header_title' ) ); ?></h1>
 					<?php } ?>
-					<a href="#">know more</a>
+					<a href="<?php echo esc_url( wildtravel_theme_options( 'header_button_link' ) ); ?>"><?php echo esc_html( wildtravel_theme_options( 'header_button_text' ) ); ?></a>
 			</div>
 			<?php
 		elseif ( ! is_front_page() && is_home() || is_singular() ) :
