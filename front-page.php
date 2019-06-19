@@ -29,15 +29,15 @@ $the_query = new WP_Query(
 ?>
 <?php
 // If we have posts lets show them.
-if ($the_query->have_posts()) :
+if ( $the_query->have_posts() ) :
 	?>
 	<section class="section_one">
 		<div class="container">
-			<h2 class="section-title"><span><?php esc_html_e('Latest Stories', 'text_domain'); ?></span></h2>
+			<h2 class="section-title"><span><?php esc_html_e( 'Latest Stories', 'text_domain' ); ?></span></h2>
 			<div class="row">
 				<?php
 				// Loop through the posts.
-				while ($the_query->have_posts()) :
+				while ( $the_query->have_posts() ) :
 					$the_query->the_post();
 					?>
 
@@ -48,7 +48,7 @@ if ($the_query->have_posts()) :
 							</a>
 							<div class="blog_content">
 								<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-								<?php the_content(''); ?>
+								<?php the_excerpt(); ?>
 							</div>
 						</figure>
 					</article>
@@ -65,7 +65,7 @@ if ($the_query->have_posts()) :
 $the_query = new WP_Query(
 	array(
 		'post_type'           => 'post',
-		//'orderby'             => 'rand',
+		// 'orderby'             => 'rand',
 		'ignore_sticky_posts' => 1,
 		'posts_per_page'      => 6,
 	)
@@ -73,15 +73,15 @@ $the_query = new WP_Query(
 ?>
 <?php
 // If we have posts lets show them.
-if ($the_query->have_posts()) :
+if ( $the_query->have_posts() ) :
 	?>
 	<section class="section_two">
 		<div class="container">
-			<h2 class="section-title"><span><?php esc_html_e('Read on', 'text_domain'); ?></span></h2>
+			<h2 class="section-title"><span><?php esc_html_e( 'Read on', 'text_domain' ); ?></span></h2>
 			<div class="row">
 				<?php
 				// Loop through the posts.
-				while ($the_query->have_posts()) :
+				while ( $the_query->have_posts() ) :
 					$the_query->the_post();
 					?>
 
