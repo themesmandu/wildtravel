@@ -46,6 +46,7 @@ if ( post_password_required() ) {
 			?>
 		</h2><!-- .comments-title -->
 
+		<h2 class="section-title"><span><?php esc_html_e('Comments', 'text_domain'); ?></span></h2>
 
 		<ol class="comment-list">
 			<?php
