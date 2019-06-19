@@ -11,18 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php wildtravel_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<?php
 
 		the_content( '' );
 
-		if ( ! is_singular() ) :
-			?>
-			<a class="more_link" href="<?php esc_url( the_permalink() ); ?>"><?php echo esc_html__( 'Read More', 'wildtravel' ); ?></a>	
-			<?php
-			endif;
 
 			wp_link_pages(
 				array(
