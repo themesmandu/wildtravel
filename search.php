@@ -12,7 +12,7 @@ get_header();
 
 <div class="container">
 	<div class="row">
-		<main id="main" class="col-lg-8">
+		<main id="main" class="col-lg-12">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -49,10 +49,6 @@ get_header();
 			?>
 
 		</main><!-- #main -->
-
-		<?php
-		get_sidebar();
-		?>
 	</div><!-- .row -->
 </div><!-- .container -->
 

@@ -12,12 +12,9 @@ get_header();
 
 <div class="container">
 	<div class="row">
-		<main id="main" class="col-lg-8">
+		<main id="main" class="col-lg-12">
 
 			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wildtravel' ); ?></h1>
-				</header><!-- .page-header -->
 
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wildtravel' ); ?></p>
@@ -57,10 +54,6 @@ get_header();
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
-
-		<?php
-		get_sidebar();
-		?>
 	</div><!-- .row -->
 </div><!-- .container -->
 

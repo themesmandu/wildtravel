@@ -198,7 +198,6 @@ header.site-header {
     min-height: 700px;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
     position: relative;
 }
@@ -215,15 +214,26 @@ header.site-header:before {
     left: 0;
 }
 
-.header-content {
-    text-align: center;
-    padding: 175px 0;
+.header-wrap {
     position: relative;
 }
 
-.header-content h1 {
+.header-wrap .header-content,
+.header-wrap .page-content {
+    text-align: center;
+    padding: 175px 0;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-wrap h1 {
     color: #ffffff;
     margin-bottom: 15px;
+}
+
+.header-wrap .page-content h1 {
+    font-size: 56px;
 }
 
 .header-content p {
@@ -650,7 +660,9 @@ hr.block-separator {
 /* -- Single Page Styles -- */
 
 .single #main,
-.page #main {
+.page #main,
+.error404 #main,
+.search #main {
     max-width: 830px;
     margin: auto;
 }
@@ -871,6 +883,47 @@ article p {
 
 .page-links {
     margin: 12px 0 0;
+}
+
+
+/* -- Error 404 Styles -- */
+
+.error404 section,
+.search section {
+    padding: 0;
+}
+
+.error404 section .widget {
+    margin-top: 50px;
+}
+
+.error404 section ul {
+    padding-left: 18px;
+}
+
+.error404 section li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    color: rgba(255, 104, 10, 0.7);
+}
+
+.error404 section p,
+.error404 section li a,
+.search section p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.error404 section a {
+    color: rgba(255, 104, 10, 0.7);
+    box-shadow: 0 1px 0 rgba(255, 104, 10, 0.7);
+}
+
+.error404 section .screen-reader-text,
+.search section .screen-reader-text {
+    margin-bottom: 7px;
+    display: block;
 }
 
 

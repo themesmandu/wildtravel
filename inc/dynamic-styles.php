@@ -45,7 +45,7 @@ header.site-header {
 header.site-header {
 	background-image: url(
 		<?php
-		echo esc_url( get_the_post_thumbnail_url( get_option( 'page_for_posts' ) ) );
+		echo esc_url( get_the_post_thumbnail_url( get_option( 'page_for_posts' ), 'full' ) );
 		?>
 	);
 }
