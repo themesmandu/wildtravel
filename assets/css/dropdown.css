@@ -147,7 +147,7 @@
         right: 0;
         height: 2px;
         width: 22px;
-        background: #3381f2;
+        background: #ff680a;
     }
     #menu span:nth-child(2) {
         top: 6px;
@@ -173,17 +173,6 @@
     #navbarmenus.show {
         left: 0;
     }
-    #navbarmenus #menu {
-        display: block;
-        margin: 10px 10px 10px auto;
-    }
-    #navbarmenus #menu span {
-        transform: rotate(-45deg);
-        top: 6px;
-    }
-    #navbarmenus #menu span:nth-child(2) {
-        transform: rotate(45deg)
-    }
     #navbarmenus .navbar-nav .menu-item {
         margin: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.03);
@@ -192,7 +181,7 @@
     }
     #navbarmenus .navbar-nav .menu-item .nav-link {
         font-size: 13px;
-        color: #d7d5f0;
+        color: #d7d5f0 !important;
         text-transform: uppercase;
         padding: 20px;
         line-height: 1.2;
@@ -211,6 +200,7 @@
         background: transparent;
         padding-left: 20px;
         width: auto;
+        box-shadow: none;
     }
     #navbarmenus .navbar-nav .menu-item .sub-menu .menu-item {
         border: none;

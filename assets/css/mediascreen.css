@@ -1,0 +1,159 @@
+/* -- Media Screens Styles -- */
+
+@media (max-width: 1200px) {
+    .section_two .blog_content h3,
+    .grid_content .blog_content h2 {
+        padding: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    header.site-header {
+        min-height: 500px;
+    }
+    .header-wrap .header-content,
+    .header-wrap .page-content {
+        padding: 115px 0;
+    }
+    section figure,
+    .grid_content .entry-header,
+    section figure img {
+        height: 440px;
+    }
+    .section_two figure,
+    .section_two figure img,
+    .grid_content .entry-header,
+    .grid_content img {
+        height: 280px;
+        min-height: 280px;
+    }
+    .section_two .blog_content h3,
+    .grid_content .blog_content h2 {
+        font-size: 26px;
+    }
+    .header-wrap .page-content h1 {
+        font-size: 46px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+    .section_two figure,
+    .section_two figure img,
+    .grid_content .entry-header,
+    .grid_content img {
+        height: 200px;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .related_wrap {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    .related_wrap .row_wrap {
+        border-bottom: 1px solid #eeeeee;
+        padding-bottom: 25px;
+    }
+    .related_wrap .row_wrap:last-child {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    .related_wrap .figure,
+    .related_wrap .blog_content {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .related_wrap img {
+        width: auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    input,
+    textarea,
+    select,
+    .comment-respond input[type=text],
+    .comment-respond input[type=email],
+    .comment-respond .comment-form-comment textarea {
+        padding: 8px 10px;
+    }
+    header.site-header {
+        min-height: 350px;
+    }
+    .header-wrap h1 {
+        font-size: 34px;
+    }
+    .header-wrap .header-content,
+    .header-wrap .page-content {
+        padding: 42px 0;
+    }
+    section {
+        padding: 15px 0;
+    }
+    section .blog_content h3,
+    .grid_content .blog_content h2 {
+        font-size: 32px;
+        line-height: 1.15;
+    }
+    section figure,
+    .grid_content .entry-header,
+    section figure img {
+        height: 375px;
+    }
+    section article {
+        margin-bottom: 20px;
+    }
+    .section_two article,
+    .grid_content article {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    #comments,
+    #respond {
+        margin-top: 32px;
+    }
+    .comment-respond p.comment-form-author,
+    .comment-respond p.comment-form-email {
+        width: 100%;
+        margin: 0 0 10px;
+    }
+    .comment-form-url {
+        width: 100%;
+        margin-top: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    section figure,
+    .grid_content .entry-header,
+    section figure img {
+        height: 290px;
+        min-height: 280px;
+    }
+    section .blog_content,
+    .grid_content .blog_content {
+        bottom: 25px;
+        left: 25px;
+    }
+}
+
+@media (max-width: 425px) {
+    .widget_newsletterwidget .tnp-widget .tnp-field {
+        width: auto;
+    }
+    .widget_newsletterwidget .tnp-widget .tnp-field-email {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .widget_newsletterwidget form {
+        margin-bottom: 20px;
+    }
+    #footer {
+        padding: 32px 0;
+    }
+}

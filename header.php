@@ -63,10 +63,6 @@
 							<span></span>
 						</button>
 						<div class="collapse navbar-collapse" id="navbarmenus">
-							<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmenus">
-								<span></span>
-								<span></span>
-							</button>
 							<?php
 							if (has_nav_menu('menu-1')) :
 								wp_nav_menu(

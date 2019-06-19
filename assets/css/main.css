@@ -65,10 +65,10 @@ li {
 
 label {
     font-size: 14px;
-    text-transform: uppercase;
     font-weight: 700;
     color: #353638;
     display: block;
+    opacity: .7;
 }
 
 input,
@@ -199,10 +199,13 @@ header.site-header {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     position: relative;
+    z-index: 9;
 }
 
-header.site-header:before {
+header.site-header:before,
+header.site-header:after {
     content: '';
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0, #000 100%);
     position: absolute;
@@ -212,6 +215,12 @@ header.site-header:before {
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: -1;
+}
+
+header.site-header:after {
+    background: rgba(0, 0, 0, .5);
+    height: 100%;
 }
 
 .header-wrap {
@@ -271,6 +280,7 @@ header.site-header:before {
     position: fixed;
     top: 0;
     width: 100%;
+    max-width: 1920px;
     padding: 10px 0;
     background: #ffffff;
     z-index: 9;
@@ -418,7 +428,7 @@ header.site-header:before {
     padding: 50px 0;
 }
 
-.home#content {
+.home #content {
     padding: 0;
 }
 
@@ -677,7 +687,7 @@ article p {
     height: 175px;
 }
 
-.related_wrap article {
+.related_wrap .row_wrap {
     margin-bottom: 25px;
 }
 
@@ -688,17 +698,11 @@ article p {
 .related_wrap h3 {
     font-size: 24px;
     font-weight: 700;
-    margin: 0 0 4px;
+    margin: 8px 0 4px;
 }
 
 .related_wrap h3 a {
     color: #333333;
-}
-
-.cat-links,
-.tags-links {
-    display: inline-block;
-    margin-bottom: 8px;
 }
 
 .cat-links a,
@@ -746,6 +750,7 @@ article p {
 #comments .comment-notes {
     font-size: 16px;
     letter-spacing: .5px;
+    line-break: 1.5;
 }
 
 #main .comment article {
