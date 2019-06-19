@@ -54,10 +54,16 @@ get_header();
 
 								<div class="blog_content col-sm-7">
 								<?php
-								$categories_list = get_the_category_list( esc_html__( ', ', 'wildtravel' ) );
+								$categories_list = get_the_category_list( ' ' );
 								if ( $categories_list ) {
 									/* translators: 1: list of categories. */
 									printf( '<span class="cat-links">' . esc_html__( '%1$s', 'wildtravel' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+								}
+
+								$tags_list = get_the_tag_list( '', ' ' );
+								if ( $tags_list ) {
+									/* translators: 1: list of tags. */
+									printf( '<span class="tags-links">' . esc_html__( '%1$s', 'wildtravel' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 								}
 								?>
 									<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
