@@ -153,6 +153,7 @@ add_action( 'widgets_init', 'wildtravel_widgets_init' );
 function wildtravel_scripts() {
 
 	// Loading bootstrap css and js.
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_style( 'bootstrap-css', get_theme_file_uri( '/assets/css/bootstrap.min.css' ), array( 'wildtravel-style' ), '4.3.1' );
 	wp_enqueue_script( 'bootstrap-js', get_theme_file_uri( '/assets/js/bootstrap.min.js' ), array(), '4.3.1', true );
 	// Loading theme style stylesheet.
@@ -165,7 +166,7 @@ function wildtravel_scripts() {
 
 	// Add font-awesome fonts, used in the main stylesheet.
 	wp_enqueue_style( 'wildtravel-font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'wildtravel-style' ), '5.7.2' );
-
+	
 	wp_enqueue_script( 'wildtravel-global', get_template_directory_uri() . '/js/global.js', array(), '20151215', true );
 
 	// Font Open Sans
