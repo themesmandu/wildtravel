@@ -420,6 +420,14 @@ header.site-header:after {
     content: "\f0d5";
 }
 
+#social-menu li a[href*="tumblr.com"]:before {
+    content: "\f173";
+}
+
+#social-menu li a[href*="pinterest.com"]:before {
+    content: "\f231";
+}
+
 
 /* -- Content Styles -- */
 
