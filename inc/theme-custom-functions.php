@@ -16,7 +16,7 @@ if ( ! function_exists( 'wildtravel_title_split' ) ) :
 	 */
 	function wildtravel_title_split( $wildtravel_title ) {
 		$wildtravel_title_split = explode( ' ', $wildtravel_title );
-		$count                = count( $wildtravel_title_split );
+		$count                  = count( $wildtravel_title_split );
 		for ( $i = 0; $i < $count; $i++ ) {
 			if ( ( $count - 1 ) === $i ) {
 				echo wp_kses_post( '<span>' . $wildtravel_title_split[ $i ] . '</span>' );
@@ -55,7 +55,7 @@ if ( ! function_exists( 'wildtravel_header_page_title' ) ) :
 			<div class="page-content">
 					<h1 class="header-title"><?php single_post_title(); ?></h1>
 			</div>
-				<?php
+			<?php
 		elseif ( is_archive() ) :
 			?>
 			<div class="page-content">
