@@ -317,8 +317,6 @@ header.site-header:after {
 
 .site-title span {
     font-weight: 700;
-    color: rgba(255, 104, 10, 0.7);
-    display: inline-block;
 }
 
 .site-description {
@@ -329,12 +327,9 @@ header.site-header:after {
 }
 
 #site-navigation.fixed .site-title a,
-#site-navigation.fixed .site-description {
-    color: rgba(255, 104, 10, 0.7);
-}
-
+#site-navigation.fixed .site-description,
 #site-navigation.fixed .site-title span {
-    color: #777777;
+    color: #333333;
 }
 
 .top-navigation #navbarmenus div {
@@ -384,7 +379,7 @@ header.site-header:after {
 }
 
 #social-menu li a {
-    font-size: 0;
+    font-size: 0 !important;
     color: #ffffff;
     transition: .3s;
 }

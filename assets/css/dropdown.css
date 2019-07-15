@@ -188,11 +188,23 @@
         border-bottom: 1px solid transparent;
         display: block;
     }
+    #navbarmenus .menu-social-menu-container {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
     #navbarmenus #social-menu .menu-item {
         text-align: left;
+        display: inline-block;
+        border: none;
+    }
+    #navbarmenus #social-menu .menu-item .nav-link {
+        padding: 10px;
     }
     #social-menu li a[href]:before {
-        margin-right: 10px;
+        font-size: 14px !important;
+        margin: 0;
     }
     #navbarmenus .sub-menu,
     #navbarmenus .sub-menu .sub-menu {
