@@ -33,7 +33,13 @@ get_header();
 					?>
 				</div><!-- .row -->
 				<?php
-				the_posts_navigation();
+				the_posts_pagination(
+					array(
+						'mid_size'  => 2,
+						'prev_text' => '<span class="previous">' . __('Prev', 'wildtravel'),
+						'next_text' => '<span class="next">' . __('Next', 'wildtravel'),
+					)
+				);
 
 			else :
 
